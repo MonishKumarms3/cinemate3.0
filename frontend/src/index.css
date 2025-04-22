@@ -1,0 +1,102 @@
+/** @format */
+
+:root {
+	/* Typography */
+	--font-primary: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	--font-code: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+	--base-font-size: 16px;
+
+	/* Breakpoints */
+	--mobile: 480px;
+	--tablet: 768px;
+	--laptop: 1024px;
+	--desktop: 1366px;
+	--large: 2560px;
+}
+
+/* Base responsive typography */
+@media (max-width: 480px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 2560px) {
+	:root {
+		font-size: 18px;
+	}
+}
+
+/* Viewport behavior */
+@viewport {
+	width: device-width;
+	zoom: 1;
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: var(--base-font-size);
+	line-height: 1.5;
+	overflow-x: hidden;
+	min-width: 320px;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0 10px;
+	}
+}
+
+@media (min-width: 2560px) {
+	.container {
+		max-width: 2400px;
+	}
+}
+
+/* Form elements */
+input,
+select,
+textarea,
+button {
+	font-size: 16px;
+	font-family: var(--font-primary);
+}
+
+/* Touch targets for mobile */
+@media (max-width: 480px) {
+	button,
+	input[type="button"],
+	input[type="submit"] {
+		min-height: 44px;
+		min-width: 44px;
+	}
+}
+
+code {
+	font-family: var(--font-code);
+}
+
+/* Image responsiveness */
+img {
+	max-width: 100%;
+	height: auto;
+}
